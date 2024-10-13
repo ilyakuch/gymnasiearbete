@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ilyak/Documents/gymnasiearbete/uppgift1'
+relocations:     []
+...
