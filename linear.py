@@ -1,6 +1,9 @@
-n = int(input("Enter the size of n: "))
+def linear(arr):
+    total = 0
 
-arr = [i for i in range(n)]  # Create a list of size n
-for i in arr:
-    print(i, end=" ")  # Linear iteration over the list
-print()
+    for num in arr:
+        total += num
+    
+    return total
+
+print(linear([1, 2, 3, 4]))
