@@ -15,7 +15,7 @@ int quadratic(std::vector<int>& dataset) {
 
 int main() {
     
-    const int max_size = 1000;
+    const int max_size = 100000;
     const int increment = 100;
     const int max_runtime = 60;
     
@@ -23,7 +23,7 @@ int main() {
     std::vector<std::pair<int, int>> results;
     
 
-    while (iteration > max_size) {
+    while (iteration < max_size) {
 
         std::vector<int> dataset;
 
