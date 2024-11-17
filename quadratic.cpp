@@ -13,7 +13,7 @@ int quadratic(std::vector<int>& arr) {
 
 int main() {
     std::vector<int> arrr = {1, 2, 3, 4, 5};
-    int out = quadratic(arrr);
-    std::cout << out << std::endl;
+    quadratic(arrr);
+    
     return 0;
 }
