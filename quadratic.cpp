@@ -23,7 +23,7 @@ int main() {
     std::vector<std::pair<int, int>> results;
     
 
-    while (iteration > max_size) {
+    while (iteration < max_size) {
 
         std::vector<int> dataset;
 
