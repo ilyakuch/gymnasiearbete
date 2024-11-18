@@ -4,12 +4,8 @@
 #include <utility>
 #include <sstream>
 
-void quadratic(int input_size) {
-    for (size_t i = 0; i < input_size; ++i) {
-        for (size_t j = i; j < input_size; ++j) {
-            ;
-        }
-    }
+void constant(int input_size) {
+    ;
 }
 
 int main() {
@@ -28,7 +24,7 @@ int main() {
         
 
         auto start = std::chrono::high_resolution_clock::now();
-        quadratic(input_size);
+        constant(input_size);
         auto end = std::chrono::high_resolution_clock::now();
 
         measurment = end - start;

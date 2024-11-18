@@ -1,8 +1,30 @@
-def quadratic(arr: list[int]) -> int:
-    pairs = 0
-    for i in range(len(arr)):
-        for j in range(i + 1, len(arr)):
-            pairs = pairs + 1
-    return pairs
+import timeit
 
-print(quadratic([1, 2, 3, 4, 5]))
+def quadratic(input_size):
+    for i in range(input_size):
+        for j in range(input_size):
+            pass
+
+
+MAX_SIZE = 1000000
+INCREMENT = 2
+MAX_RUNTIME = 2
+
+input_size = 1
+measurment = 0
+
+results = []
+
+while input_size <= MAX_SIZE and measurment <= MAX_RUNTIME:
+
+    measurment = timeit.timeit(lambda: quadratic(input_size))
+
+    print(f"Round: {input_size}  Time: {measurment}")
+
+    results.append([input_size, measurment])
+
+    input_size = input_size * INCREMENT
+
+print("\n\nComplete\ncsv\n\nx,y")
+for i in results:
+    print(*i, sep = ",")
