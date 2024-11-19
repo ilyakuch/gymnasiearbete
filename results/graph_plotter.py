@@ -29,5 +29,5 @@ def plot_csv(csv_file):
     plt.show()
 
 # Example usage:
-csv_file = r'C:\Users\ilyak\Documents\GitHub Repos\gymnasiearbete\csv.txt'
+csv_file = r'.\results\csv.txt'
 plot_csv(csv_file)

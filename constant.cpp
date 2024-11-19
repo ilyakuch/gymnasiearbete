@@ -2,7 +2,6 @@
 #include <iostream>
 #include <chrono>
 #include <utility>
-#include <sstream>
 
 void constant(int input_size) {
     ;
@@ -11,10 +10,10 @@ void constant(int input_size) {
 int main() {
     
     const int MAX_SIZE = 10000000;
-    const int INCREMENT = 2;
-    const int MAX_RUNTIME = 2;
+    const int INCREMENT = 100000;
+    const int MAX_RUNTIME = 10;
     
-    int input_size = 1;
+    int input_size = 0;
     std::vector<std::pair<int, double>> results;
 
     std::chrono::duration<double> measurment;
@@ -33,7 +32,7 @@ int main() {
 
         results.push_back({input_size, measurment.count()});
 
-        input_size *= INCREMENT;
+        input_size += INCREMENT;
 
     }
 
