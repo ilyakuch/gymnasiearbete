@@ -10,7 +10,7 @@ MAX_SIZE = 10000000
 INCREMENT = 1000
 MAX_RUNTIME = 10
 
-input_size = 1
+input_size = 0
 measurment = 0
 
 results = []
