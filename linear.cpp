@@ -24,11 +24,15 @@ int main() {
     while (input_size <= MAX_SIZE && measurment.count() <= MAX_RUNTIME) {
         
 
-        auto start = std::chrono::high_resolution_clock::now();
+        auto start1 = std::chrono::high_resolution_clock::now();
         linear(input_size);
-        auto end = std::chrono::high_resolution_clock::now();
+        auto end1 = std::chrono::high_resolution_clock::now();
 
-        measurment = end - start;
+        auto start2 = std::chrono::high_resolution_clock::now();
+        linear(input_size);
+        auto end2 = std::chrono::high_resolution_clock::now();
+
+        measurment = ((end1 - start1) + (end2 - start2)/2);
 
         std::cout << "Round: " << input_size << "  Time: " << measurment.count() << " s" << std::endl;
 

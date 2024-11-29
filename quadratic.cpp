@@ -14,7 +14,7 @@ void quadratic(int input_size) {
 int main() {
     
     const int MAX_SIZE = 10000000;
-    const int INCREMENT = 1000;
+    const int INCREMENT = 5000;
     const int MAX_RUNTIME = 10;
     
     int input_size = 0;
@@ -26,11 +26,15 @@ int main() {
     while (input_size <= MAX_SIZE && measurment.count() <= MAX_RUNTIME) {
         
 
-        auto start = std::chrono::high_resolution_clock::now();
+        auto start1 = std::chrono::high_resolution_clock::now();
         quadratic(input_size);
-        auto end = std::chrono::high_resolution_clock::now();
+        auto end1 = std::chrono::high_resolution_clock::now();
 
-        measurment = end - start;
+        auto start2 = std::chrono::high_resolution_clock::now();
+        quadratic(input_size);
+        auto end2 = std::chrono::high_resolution_clock::now();
+
+        measurment = ((end1 - start1) + (end2 - start2)/2);
 
         std::cout << "Round: " << input_size << "  Time: " << measurment.count() << " s" << std::endl;
 
