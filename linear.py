@@ -18,12 +18,8 @@ while input_size <= MAX_SIZE and measurment/2 <= MAX_RUNTIME:
 
     measurment = timeit.timeit(lambda: linear(input_size), number=2)
 
-    print(f"Round: {input_size}  Time: {measurment}  Avg: {measurment/2}")
-
-    results.append([input_size, measurment/2])
+    print(f"{input_size},{(measurment*500):.5f}")
+    
+    results.append([input_size, round((measurment*500), 5)])
 
     input_size = input_size + INCREMENT
-
-print("\n\nComplete\ncsv\n\nx,y")
-for i in results:
-    print(*i, sep = ",")

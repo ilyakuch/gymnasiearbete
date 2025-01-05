@@ -36,17 +36,10 @@ int main() {
 
         measurment = ((end1 - start1) + (end2 - start2)/2);
 
-        std::cout << "Round: " << input_size << "  Time: " << measurment.count() << " s" << std::endl;
-
-        results.push_back({input_size, measurment.count()});
+        std::cout << std::fixed << input_size << "," << measurment.count()*1000 << std::endl;
 
         input_size += INCREMENT;
 
-    }
-
-    std::cout << "\n\nComplete\ncsv\n\nx,y" << std::endl;
-    for (const auto& i : results) {
-        std::cout << i.first << "," << i.second << std::endl;
     }
     
     return 0;
